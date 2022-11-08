@@ -1,7 +1,15 @@
 Feature("Zero bank app - E2E Tests")
 
+Before(({ I }) => {
+    console.log("BEFORE HOOK")
+    I.amOnPage('http://zero.webappsecurity.com/index.html')
+})
+
+After(({ I }) => {
+    console.log("AFTER HOOK")
+})
+
 Scenario("Login test - Negative: wrong password and username", ({ I }) => {
-    I.amOnPage("http://zero.webappsecurity.com/index.html")
     I.click('#signin_button')  // click using element's ID
     I.fillField('#user_login', 'invalid_username')  
     I.fillField('#user_password', 'invalid_password')
@@ -11,7 +19,6 @@ Scenario("Login test - Negative: wrong password and username", ({ I }) => {
 }) 
 
 Scenario("Login test - Negative: wrong username", ({ I }) => {
-    I.amOnPage("http://zero.webappsecurity.com/index.html")
     I.click('#signin_button')  // click using element's ID
     I.fillField('#user_login', 'invalid_username')  
     I.fillField('#user_password', 'password')
@@ -21,7 +28,6 @@ Scenario("Login test - Negative: wrong username", ({ I }) => {
 }) 
 
 Scenario("Login test - Negative: wrong password", ({ I }) => {
-    I.amOnPage("http://zero.webappsecurity.com/index.html")
     I.click('#signin_button')  // click using element's ID
     I.fillField('#user_login', 'username')  
     I.fillField('#user_password', 'invalid_password')
@@ -31,7 +37,6 @@ Scenario("Login test - Negative: wrong password", ({ I }) => {
 }) 
 
 Scenario("Login test - Positive", ({ I }) => {
-    I.amOnPage("http://zero.webappsecurity.com/index.html")
     I.click('#signin_button')  // click using element's ID
     I.fillField('#user_login', 'username')  
     I.fillField('#user_password', 'password')

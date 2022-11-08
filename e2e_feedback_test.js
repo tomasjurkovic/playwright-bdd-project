@@ -1,7 +1,15 @@
 Feature('Zero Bank Application - E2E Feedback tests')
 
-Scenario('Feedback form - Reset form', ({ I }) => {
+Before(({ I }) => {
+    console.log("BEFORE HOOK")
     I.amOnPage('http://zero.webappsecurity.com/feedback.html')
+})
+
+After(({ I }) => {
+    console.log("AFTER HOOK")
+})
+
+Scenario('Feedback form - Reset form', ({ I }) => {
     I.fillField('#name', 'Tomas')
     I.fillField('#email', 'tomas@jurkovic.com')
     I.fillField('#subject', 'My feedback')
@@ -14,7 +22,6 @@ Scenario('Feedback form - Reset form', ({ I }) => {
 })
 
 Scenario('Feedback form - Submit form', ({ I }) => {
-    I.amOnPage('http://zero.webappsecurity.com/feedback.html')
     I.fillField('#name', 'Tomas')
     I.fillField('#email', 'tomas@jurkovic.com')
     I.fillField('#subject', 'My feedback')
