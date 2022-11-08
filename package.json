@@ -1,0 +1,25 @@
+{
+  "name": "playwright-bdd-project",
+  "version": "1.0.0",
+  "description": "in this project I try connect BDD and playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomasjurkovic/playwright-bdd-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomasjurkovic/playwright-bdd-project/issues"
+  },
+  "homepage": "https://github.com/tomasjurkovic/playwright-bdd-project#readme",
+  "dependencies": {
+    "codeceptjs": "^3.3.6",
+    "playwright": "^1.27.1",
+    "prettier": "^2.7.1"
+  }
+}
