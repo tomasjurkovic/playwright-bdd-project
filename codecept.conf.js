@@ -18,7 +18,8 @@ exports.config = {
     }
   },
   include: {
-    I: './steps_file.js'
+    I: './steps_file.js',
+    LoginPage: './pages/LoginPage.js'
   },
   name: 'playwright-bdd-project'
 }
